@@ -48,7 +48,7 @@ app.put('/lions/:id', function(req, res) {
 app.delete('/lions/:id', function(req, res) {
   var lion = _.findIndex(lions, {id: req.params.id});
       lions.splice(lion,1);
-      res.json(req.lion);
+      res.json(lion);
 });
 
 app.set('port', (process.env.PORT || 8080));
